@@ -1,0 +1,19 @@
+ jdata = orte_get_job_data_object(job);
+ printf("************* jdata->jobid = %u, jdata->num_apps = %u, jdata->num_procs = %u\n", jdata->jobid, jdata->num_apps, jdata->num_procs);
+ puts("-------------------------------");
+//======================================
+ int i;
+ int job_sum = 0;
+ for (i = 0; i < orte_job_data->size; i++) {
+ 	orte_job_t *j = opal_pointer_array_get_item(orte_job_data, i);
+	if (!j) {
+		continue;
+	}
+	job_sum++;
+
+	printf("j->jobid = %u, j->num_apps = %d, j->num_procs = %d\n", j->jobid, j->num_apps, j->num_procs);
+ }
+ printf("************* orte_job_data->size = %d, job_sum = %d\n", orte_job_data->size, job_sum);
+ //=====================================
+ puts("ORTE_PROC_MY_NAME");
+ printf("ORTE_PROC_MY_NAME->jobid = %u\n", ORTE_PROC_MY_NAME->jobid);

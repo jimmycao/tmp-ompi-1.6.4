@@ -1,0 +1,30 @@
+libjenkins_hash_la-jenkins_hash.lo: jenkins_hash.c jenkins_hash.h \
+ ../../config.h /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h \
+ ../../otflib/OTF_inttypes.h ../../otflib/OTF_inttypes_unix.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/wchar.h
+
+jenkins_hash.h:
+
+../../config.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h:
+
+../../otflib/OTF_inttypes.h:
+
+../../otflib/OTF_inttypes_unix.h:
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/wchar.h:

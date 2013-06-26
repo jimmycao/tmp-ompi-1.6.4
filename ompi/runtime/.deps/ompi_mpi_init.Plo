@@ -1,0 +1,483 @@
+runtime/ompi_mpi_init.lo: runtime/ompi_mpi_init.c \
+ ../ompi/include/ompi_config.h ../opal/include/opal_config.h \
+ ../opal/include/opal_config_bottom.h ../opal/include/opal_config.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdbool.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/stdio_lim.h /usr/include/sys/param.h \
+ /usr/include/linux/param.h /usr/include/asm/param.h \
+ /usr/include/asm-generic/param.h /usr/include/sys/types.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/time.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/sys/time.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/xlocale.h /usr/include/bits/setjmp.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h ../ompi/include/mpi.h \
+ ../opal/class/opal_list.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h \
+ /usr/include/bits/sys_errlist.h /usr/include/bits/stdio.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/alloca.h \
+ ../opal/class/opal_object.h /usr/include/assert.h \
+ ../opal/mca/base/base.h ../opal/mca/mca.h \
+ ../opal/mca/base/mca_base_param.h ../opal/util/cmd_line.h \
+ ../opal/threads/mutex.h ../opal/threads/mutex_unix.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../opal/include/opal/sys/atomic.h \
+ ../opal/include/opal/sys/architecture.h \
+ ../opal/include/opal/sys/amd64/atomic.h \
+ ../opal/include/opal/sys/atomic_impl.h ../opal/mca/paffinity/base/base.h \
+ ../opal/mca/paffinity/paffinity.h /usr/include/string.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ ../opal/mca/maffinity/base/base.h ../opal/mca/maffinity/maffinity.h \
+ ../opal/mca/maffinity/maffinity_types.h ../opal/runtime/opal_progress.h \
+ ../opal/threads/threads.h ../opal/util/output.h ../opal/util/error.h \
+ ../opal/util/stacktrace.h ../opal/util/show_help.h \
+ ../opal/runtime/opal.h ../opal/event/event.h \
+ ../opal/event/event_rename.h ../opal/event/evutil.h \
+ ../opal/mca/hwloc/hwloc.h ../opal/mca/hwloc/hwloc132/hwloc132.h \
+ ../opal/mca/hwloc/hwloc132/hwloc/include/hwloc.h \
+ /root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/autogen/config.h \
+ /root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/rename.h \
+ /root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/bitmap.h \
+ /root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/cpuset.h \
+ /root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/helper.h \
+ ../orte/util/proc_info.h ../orte/include/orte_config.h \
+ ../orte/include/orte/types.h ../opal/dss/dss_types.h \
+ ../orte/runtime/runtime.h ../orte/mca/grpcomm/grpcomm.h \
+ ../orte/include/orte/constants.h ../opal/include/opal/constants.h \
+ ../orte/mca/rml/rml_types.h /usr/include/sys/uio.h \
+ /usr/include/bits/uio.h ../orte/mca/grpcomm/grpcomm_types.h \
+ ../orte/runtime/orte_globals.h ../opal/class/opal_pointer_array.h \
+ ../opal/class/opal_value_array.h ../orte/mca/plm/plm_types.h \
+ ../orte/util/name_fns.h ../orte/runtime/orte_wait.h ../opal/dss/dss.h \
+ ../orte/util/show_help.h ../orte/mca/ess/ess.h \
+ ../orte/mca/errmgr/errmgr.h ../orte/mca/notifier/notifier.h \
+ /usr/include/syslog.h /usr/include/sys/syslog.h \
+ /usr/include/bits/syslog-path.h ../ompi/include/ompi/constants.h \
+ ../ompi/mpi/f77/constants.h ../ompi/runtime/mpiruntime.h \
+ ../opal/class/opal_hash_table.h ../ompi/runtime/params.h \
+ ../ompi/runtime/ompi_module_exchange.h \
+ ../ompi/communicator/communicator.h ../ompi/errhandler/errhandler.h \
+ ../opal/include/opal/prefetch.h \
+ ../ompi/errhandler/errhandler_predefined.h \
+ ../ompi/errhandler/errcode-internal.h ../ompi/group/group.h \
+ ../ompi/proc/proc.h ../ompi/include/ompi/types.h \
+ ../ompi/group/group_dbg.h ../ompi/mca/coll/coll.h ../opal/mca/crs/crs.h \
+ ../opal/mca/crs/base/base.h ../opal/util/opal_environ.h \
+ ../ompi/info/info.h ../ompi/errhandler/errcode.h \
+ ../ompi/request/request.h ../ompi/class/ompi_free_list.h \
+ ../opal/class/opal_atomic_lifo.h ../opal/threads/condition.h \
+ ../opal/runtime/opal_cr.h ../ompi/request/request_dbg.h ../ompi/op/op.h \
+ ../ompi/datatype/ompi_datatype.h ../opal/datatype/opal_convertor.h \
+ ../opal/datatype/opal_datatype.h ../ompi/mpi/f77/fint_2_int.h \
+ ../ompi/mca/op/op.h ../ompi/mca/op/base/base.h ../ompi/file/file.h \
+ ../ompi/mca/io/io.h ../ompi/attribute/attribute.h \
+ ../ompi/mca/allocator/base/base.h ../ompi/mca/allocator/allocator.h \
+ ../ompi/mca/mpool/mpool.h ../ompi/mca/rcache/base/base.h \
+ ../ompi/mca/rcache/rcache.h ../ompi/mca/mpool/base/base.h \
+ ../ompi/mca/pml/pml.h ../ompi/mca/pml/base/base.h \
+ ../ompi/mca/osc/base/base.h ../ompi/win/win.h ../ompi/mca/osc/osc.h \
+ ../ompi/mca/coll/base/base.h ../ompi/mca/io/base/base.h \
+ ../ompi/debuggers/debuggers.h ../ompi/mca/pml/base/pml_base_bsend.h \
+ ../ompi/mca/dpm/base/base.h ../ompi/mca/dpm/dpm.h \
+ ../ompi/mca/pubsub/base/base.h ../ompi/mca/pubsub/pubsub.h \
+ ../ompi/runtime/ompi_cr.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/float.h
+
+../ompi/include/ompi_config.h:
+
+../opal/include/opal_config.h:
+
+../opal/include/opal_config_bottom.h:
+
+../opal/include/opal_config.h:
+
+/usr/include/stdint.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdbool.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/limits.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/sys/param.h:
+
+/usr/include/linux/param.h:
+
+/usr/include/asm/param.h:
+
+/usr/include/asm-generic/param.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+../ompi/include/mpi.h:
+
+../opal/class/opal_list.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/alloca.h:
+
+../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+../opal/mca/base/base.h:
+
+../opal/mca/mca.h:
+
+../opal/mca/base/mca_base_param.h:
+
+../opal/util/cmd_line.h:
+
+../opal/threads/mutex.h:
+
+../opal/threads/mutex_unix.h:
+
+/usr/include/errno.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+../opal/include/opal/sys/atomic.h:
+
+../opal/include/opal/sys/architecture.h:
+
+../opal/include/opal/sys/amd64/atomic.h:
+
+../opal/include/opal/sys/atomic_impl.h:
+
+../opal/mca/paffinity/base/base.h:
+
+../opal/mca/paffinity/paffinity.h:
+
+/usr/include/string.h:
+
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
+../opal/mca/maffinity/base/base.h:
+
+../opal/mca/maffinity/maffinity.h:
+
+../opal/mca/maffinity/maffinity_types.h:
+
+../opal/runtime/opal_progress.h:
+
+../opal/threads/threads.h:
+
+../opal/util/output.h:
+
+../opal/util/error.h:
+
+../opal/util/stacktrace.h:
+
+../opal/util/show_help.h:
+
+../opal/runtime/opal.h:
+
+../opal/event/event.h:
+
+../opal/event/event_rename.h:
+
+../opal/event/evutil.h:
+
+../opal/mca/hwloc/hwloc.h:
+
+../opal/mca/hwloc/hwloc132/hwloc132.h:
+
+../opal/mca/hwloc/hwloc132/hwloc/include/hwloc.h:
+
+/root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/autogen/config.h:
+
+/root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/rename.h:
+
+/root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/bitmap.h:
+
+/root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/cpuset.h:
+
+/root/soft/openmpi-1.6.4/opal/mca/hwloc/hwloc132/hwloc/include/hwloc/helper.h:
+
+../orte/util/proc_info.h:
+
+../orte/include/orte_config.h:
+
+../orte/include/orte/types.h:
+
+../opal/dss/dss_types.h:
+
+../orte/runtime/runtime.h:
+
+../orte/mca/grpcomm/grpcomm.h:
+
+../orte/include/orte/constants.h:
+
+../opal/include/opal/constants.h:
+
+../orte/mca/rml/rml_types.h:
+
+/usr/include/sys/uio.h:
+
+/usr/include/bits/uio.h:
+
+../orte/mca/grpcomm/grpcomm_types.h:
+
+../orte/runtime/orte_globals.h:
+
+../opal/class/opal_pointer_array.h:
+
+../opal/class/opal_value_array.h:
+
+../orte/mca/plm/plm_types.h:
+
+../orte/util/name_fns.h:
+
+../orte/runtime/orte_wait.h:
+
+../opal/dss/dss.h:
+
+../orte/util/show_help.h:
+
+../orte/mca/ess/ess.h:
+
+../orte/mca/errmgr/errmgr.h:
+
+../orte/mca/notifier/notifier.h:
+
+/usr/include/syslog.h:
+
+/usr/include/sys/syslog.h:
+
+/usr/include/bits/syslog-path.h:
+
+../ompi/include/ompi/constants.h:
+
+../ompi/mpi/f77/constants.h:
+
+../ompi/runtime/mpiruntime.h:
+
+../opal/class/opal_hash_table.h:
+
+../ompi/runtime/params.h:
+
+../ompi/runtime/ompi_module_exchange.h:
+
+../ompi/communicator/communicator.h:
+
+../ompi/errhandler/errhandler.h:
+
+../opal/include/opal/prefetch.h:
+
+../ompi/errhandler/errhandler_predefined.h:
+
+../ompi/errhandler/errcode-internal.h:
+
+../ompi/group/group.h:
+
+../ompi/proc/proc.h:
+
+../ompi/include/ompi/types.h:
+
+../ompi/group/group_dbg.h:
+
+../ompi/mca/coll/coll.h:
+
+../opal/mca/crs/crs.h:
+
+../opal/mca/crs/base/base.h:
+
+../opal/util/opal_environ.h:
+
+../ompi/info/info.h:
+
+../ompi/errhandler/errcode.h:
+
+../ompi/request/request.h:
+
+../ompi/class/ompi_free_list.h:
+
+../opal/class/opal_atomic_lifo.h:
+
+../opal/threads/condition.h:
+
+../opal/runtime/opal_cr.h:
+
+../ompi/request/request_dbg.h:
+
+../ompi/op/op.h:
+
+../ompi/datatype/ompi_datatype.h:
+
+../opal/datatype/opal_convertor.h:
+
+../opal/datatype/opal_datatype.h:
+
+../ompi/mpi/f77/fint_2_int.h:
+
+../ompi/mca/op/op.h:
+
+../ompi/mca/op/base/base.h:
+
+../ompi/file/file.h:
+
+../ompi/mca/io/io.h:
+
+../ompi/attribute/attribute.h:
+
+../ompi/mca/allocator/base/base.h:
+
+../ompi/mca/allocator/allocator.h:
+
+../ompi/mca/mpool/mpool.h:
+
+../ompi/mca/rcache/base/base.h:
+
+../ompi/mca/rcache/rcache.h:
+
+../ompi/mca/mpool/base/base.h:
+
+../ompi/mca/pml/pml.h:
+
+../ompi/mca/pml/base/base.h:
+
+../ompi/mca/osc/base/base.h:
+
+../ompi/win/win.h:
+
+../ompi/mca/osc/osc.h:
+
+../ompi/mca/coll/base/base.h:
+
+../ompi/mca/io/base/base.h:
+
+../ompi/debuggers/debuggers.h:
+
+../ompi/mca/pml/base/pml_base_bsend.h:
+
+../ompi/mca/dpm/base/base.h:
+
+../ompi/mca/dpm/dpm.h:
+
+../ompi/mca/pubsub/base/base.h:
+
+../ompi/mca/pubsub/pubsub.h:
+
+../ompi/runtime/ompi_cr.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/float.h:
